@@ -37,7 +37,7 @@ export class ProductsService {
       if (idx === -1) {
         throw new HttpException('Product does not exist', 404);
       }
-      this.products.splice(1, idx);
+      this.products.splice(idx, 1);
       resolve(this.products);
     });
   }
